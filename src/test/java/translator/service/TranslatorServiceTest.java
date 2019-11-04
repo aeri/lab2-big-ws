@@ -25,4 +25,17 @@ public class TranslatorServiceTest {
     assertEquals("Esto es una prueba de servicio de traducción", translatedText.getTranslation());
   }
 
+  @Test
+  public void translateTest_ES_JP() {
+    TranslatedText translatedText = translatorService.translate("es", "ja", "Sin duda");
+    assertEquals("間違いなく", translatedText.getTranslation());
+  }
+
+  @Test
+  public void translateTest_ES_GR() {
+    TranslatedText translatedText = translatorService.translate("es", "el", "No te preocupes");
+    assertEquals("Μην ανησυχείς", translatedText.getTranslation());
+  }
+
+
 }
